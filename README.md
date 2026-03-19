@@ -48,9 +48,9 @@
 ```bash
 docker-compose up --build
 ```
-*Сервис будет доступен по адресу: http://localhost:8000*
+*Сервис будет доступен по адресу: http://127.0.0.1:8000/*
 
-*Документация Swagger: http://localhost:8000/docs*
+*Документация Swagger: http://127.0.0.1:8000/docs/*
 
 **Автор** 🤝 [Тагаев Мухаммад](https://github.com/Muta-Mad).
 
