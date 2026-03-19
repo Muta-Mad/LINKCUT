@@ -1,0 +1,41 @@
+# Git
+.git
+.gitignore
+
+# Virtual environment
+venv
+env
+.venv
+ENV
+
+# Python cache
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache
+.ruff_cache
+.mypy_cache
+
+# IDE
+.vscode
+.idea
+
+# Environment variables
+.env
+.envrc
+
+# Logs and databases
+*.log
+*.sqlite3
+*.db
+
+# Docker
+.dockerignore
+docker-compose*.yml
+Dockerfile
+
+# Tests
+tests/
+htmlcov/
+.coverage
