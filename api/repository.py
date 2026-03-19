@@ -1,8 +1,7 @@
-from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
+from sqlalchemy.ext.asyncio import AsyncSession
 
 from api.models import URLMap
-
 
 
 async def get_url_map(

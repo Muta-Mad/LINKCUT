@@ -1,9 +1,9 @@
-from sqlalchemy.orm import Mapped, mapped_column
 from sqlalchemy import String
+from sqlalchemy.orm import Mapped, mapped_column
 
 from core.basemodel import Base
+from core.constants import DEFAULT_COUNT, MAX_LENGTH, SHORT_LENGTH
 from core.idmixin import IdPkMixin
-from core.constants import SHORT_LENGTH, MAX_LENGTH, DEFAULT_COUNT
 
 
 class URLMap(IdPkMixin, Base):

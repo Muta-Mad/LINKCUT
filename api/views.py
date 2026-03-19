@@ -1,11 +1,11 @@
 from fastapi import APIRouter, Depends, HTTPException, status
-from sqlalchemy.ext.asyncio import AsyncSession
 from fastapi.responses import RedirectResponse
+from sqlalchemy.ext.asyncio import AsyncSession
 
-from api.schemas import ReadShortUrl, CreateUrlMap, Stats
+from api.repository import counter_transitions, get_url_map
+from api.schemas import CreateUrlMap, ReadShortUrl, Stats
 from api.services import create_short_url
 from core.database import get_db
-from api.repository import get_url_map, counter_transitions
 
 router = APIRouter()
 
