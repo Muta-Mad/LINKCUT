@@ -18,7 +18,9 @@ async def create_short_url(
         custom_id = await get_unique_short_id(session)
     is_valid = await validate_short_id(custom_id, session)
     if not is_valid:
-        raise ValueError('Предложенный вариант короткой ссылки уже существует.')
+        raise ValueError(
+            'Предложенный вариант короткой ссылки уже существует.'
+        )
     url_map = URLMap(original=original_url, short=custom_id)
     session.add(url_map)
     await session.commit()
@@ -31,7 +33,9 @@ async def get_unique_short_id(session: AsyncSession):
         short = ''.join(random.choices(chars, k=SHORT_ID_LENGTH))
         if await validate_short_id(short, session):
             return short
-    raise ValueError(f'Не удалось сгенерировать уникальный ID после {MAX_ITERATION} попыток')
+    raise ValueError(
+        f'Не удалось сгенерировать уникальный ID после {MAX_ITERATION} попыток'
+    )
 
 async def validate_short_id(
     short_id: str,

@@ -9,7 +9,9 @@ async def get_url_map(
     session: AsyncSession,
     ):
     """Получает запись URLMap по короткому индификатору."""
-    result = await session.execute(select(URLMap).where(URLMap.short == short_id))
+    result = await session.execute(
+        select(URLMap).where(URLMap.short == short_id)
+    )
     return result.scalar_one_or_none()
 
 async def counter_transitions(

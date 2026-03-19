@@ -22,7 +22,10 @@ async def shorten(
             session=session
         )
     except ValueError as error:
-        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=str(error))
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST, 
+            detail=str(error)
+        )
     return ReadShortUrl(short=result.short)
 
 @router.get('/{short_id}')
@@ -48,6 +51,7 @@ async def get_stats(
     url_map = await get_url_map(short_id, session)
     if not url_map:
         raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND, detail='Не найдена ссылка!'
+            status_code=status.HTTP_404_NOT_FOUND, 
+            detail='Не найдена ссылка!'
         )
     return Stats(count_transitions=url_map.count_transitions)
