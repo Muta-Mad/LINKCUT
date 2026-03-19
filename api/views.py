@@ -15,11 +15,14 @@ async def shorten(
     session: AsyncSession = Depends(get_db),
 ):
     """Принимает длинную ссылку, возвращает короткий идентификатор."""
-    result = await create_short_url(
-        original_url=str(data.original), 
-        custom_id=data.short, 
-        session=session
-    )
+    try:
+        result = await create_short_url(
+            original_url=str(data.original), 
+            custom_id=data.short, 
+            session=session
+        )
+    except ValueError as error:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=str(error))
     return ReadShortUrl(short=result.short)
 
 @router.get('/{short_id}')
