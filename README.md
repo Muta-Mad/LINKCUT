@@ -1,3 +1,7 @@
+![Python](https://img.shields.io/badge/python-3.12-blue?style=for-the-badge&logo=python)
+![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+
 **LinkCut** — сервис сокращения ссылок 🔗
 
 Сервис для сокращения длинных URL (аналог bitly). Написан на FastAPI с использованием async SQLAlchemy, поддерживает PostgreSQL и SQLite, упакован в Docker.
@@ -36,6 +40,11 @@
 
     pytest — тестирование
 **Быстрый старт через Docker**
+
+1 - в корне проекта создайте файл .env по примеру из env.template
+
+2 - поднимите проект в контейнерах
+
 ```bash
 docker-compose up --build
 ```
