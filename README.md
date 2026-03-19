@@ -1,3 +1,7 @@
+![Python](https://img.shields.io/badge/python-3.12-blue?style=for-the-badge&logo=python)
+![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+
 **LinkCut** — сервис сокращения ссылок 🔗
 
 Сервис для сокращения длинных URL (аналог bitly). Написан на FastAPI с использованием async SQLAlchemy, поддерживает PostgreSQL и SQLite, упакован в Docker.
@@ -35,41 +39,20 @@
     Docker + docker-compose — контейнеризация
 
     pytest — тестирование
-**📦 Установка и запуск**
-## Локальный запуск
-1 - Клонировать репозиторий:
-```bash
-git clone https://github.com/Muta-Mad/LINKCUT.git
-cd LINKCUT
-```
-2 - Создать виртуальное окружение:
-```bash
-python -m venv venv
-source venv/bin/activate  # для Linux/Mac
-venv\Scripts\activate     # для Windows
-```
-3 - Установить зависимости:
-```bash
-pip install -r requirements.txt
-```
-4 - Создать файл .env (пример в .env.example)
-5 - Применить миграции:
-```bash
-alembic upgrade head
-```
-6 - Запустить сервер:
-```bash
-uvicorn main:app --reload
-```
-*Сервис будет доступен по адресу: http://localhost:8000*
+**Быстрый старт через Docker**
 
-*Документация Swagger: http://localhost:8000/docs*
+1 - в корне проекта создайте файл .env по примеру из env.template
 
-**Запуск через Docker**
+2 - поднимите проект в контейнерах
+
 ```bash
 docker-compose up --build
 ```
-**[Автор](https://github.com/Muta-Mad)** 🤝 Тагаев Мухаммад.
+*Сервис будет доступен по адресу: http://127.0.0.1:8000/*
+
+*Документация Swagger: http://127.0.0.1:8000/docs/*
+
+**Автор** 🤝 [Тагаев Мухаммад](https://github.com/Muta-Mad).
 
 **Мой [Telegram](https://t.me/METI_1337)**
 
