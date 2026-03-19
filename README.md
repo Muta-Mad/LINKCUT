@@ -39,6 +39,11 @@
     pytest — тестирование
 **Быстрый старт через Docker**
 
+1 - склонируйте проект
+```bash
+git clone git@github.com:Muta-Mad/LINKCUT.git
+cd LINKCUT
+```
 1 - в корне проекта создайте файл .env по примеру из env.template
 
 2 - поднимите проект в контейнерах
