@@ -49,7 +49,7 @@ cd LINKCUT
 2 - поднимите проект в контейнерах
 
 ```bash
-docker-compose up --build
+docker compose up --build
 ```
 *Сервис будет доступен по адресу: http://127.0.0.1:8000/*
 
