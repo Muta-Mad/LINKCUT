@@ -5,7 +5,7 @@ from api.models import URLMap
 
 
 async def get_url_map(
-    short_id:str,
+    short_id: str,
     session: AsyncSession,
     ):
     """Получает запись URLMap по короткому индификатору."""
