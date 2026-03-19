@@ -26,7 +26,7 @@ async def db_session():
 
 @pytest.mark.asyncio
 async def test_create_short_url(db_session):
-    """Тест Создание короткой ссылки"""
+    """Тест cоздание короткой ссылки"""
     result = await create_short_url(
         original_url='https://example.com',
         session=db_session
@@ -37,7 +37,7 @@ async def test_create_short_url(db_session):
 
 @pytest.mark.asyncio
 async def test_validate_short_id(db_session):
-    """Тест Проверка валидации ID"""
+    """Тест проверка валидации id"""
     test_url = URLMap(original='https://test.com', short='abc123')
     db_session.add(test_url)
     await db_session.commit()
@@ -62,6 +62,6 @@ async def test_create_duplicate_short_id(db_session):
         )
 
 def test_invalid_url_schema():
-    """Тест 4: Проверка валидации URL через Pydantic"""
+    """Тест проверка валидации URL через Pydantic"""
     with pytest.raises(ValidationError):
         CreateUrlMap(original='not-a-url')
