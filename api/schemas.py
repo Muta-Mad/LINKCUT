@@ -7,7 +7,6 @@ class CreateUrlMap(BaseModel):
     original: HttpUrl
     short: str | None = Field(None, max_length=SHORT_LENGTH)
 
-
     @field_validator('original')
     @classmethod
     def check_length(cls, value: HttpUrl):
