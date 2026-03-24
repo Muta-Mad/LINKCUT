@@ -20,8 +20,6 @@
 
 🐳 Полная контейнеризация (Docker + docker-compose)
 
-✅ Unit-тесты на основную логику
-
 🛠️ Стек технологий
 
     Python 3.12
@@ -41,12 +39,17 @@
     pytest — тестирование
 **Быстрый старт через Docker**
 
+1 - склонируйте проект
+```bash
+git clone git@github.com:Muta-Mad/LINKCUT.git
+cd LINKCUT
+```
 1 - в корне проекта создайте файл .env по примеру из env.template
 
 2 - поднимите проект в контейнерах
 
 ```bash
-docker-compose up --build
+docker compose up --build
 ```
 *Сервис будет доступен по адресу: http://127.0.0.1:8000/*
 
